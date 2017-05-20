@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
 
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700"
+		rel="stylesheet">
+
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
@@ -39,7 +42,7 @@
 
       </section>
       <footer>
-        {% if site.github.is_project_page %}
+        {% if site.github.is_project_page and jekyll.environment == 'production' %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
